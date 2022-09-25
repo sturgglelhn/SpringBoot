@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>eachArray循环</title>
+</head>
+<body>
+<div>
+    <p>在一个div中循环p标签</p>
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>序号</td>
+            <td>id</td>
+            <td>name</td>
+            <td>sex</td>
+            <td>age</td>
+            <td>是否是最后一个</td>
+            <td>年龄</td>
+        </tr>
+
+        <tr th:each="u:${userarray}">
+            <td th:text="${uStat.count}+'/'+${uStat.size}"></td>
+            <td th:text="${u.id}"></td>
+            <td th:text="${u.name}"></td>
+            <td th:text="${u.sex}"></td>
+            <td th:text="${u.age}"></td>
+            <td th:text="${uStat.last}"></td>
+            <td th:text="${uStat.current.age}"></td>
+        </tr>
+    </table>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div style="margin-left: 400px">
+        <p th:if="${sex == 'm'}">
+            性别是 男
+        </p>
+
+        <p th:if="${sex == 'f'}">
+            性别是 女
+        </p>
+
+        <p th:if="${isLogin}">
+            用户已经登录
+        </p>
+
+        <p th:if="${age > 50}">
+            年龄是大于50
+        </p>
+
+        <p th:if="${age > 5}">
+            20 > 5
+        </p>
+
+        <p th:if="${name}">
+            name 是" "
+        </p>
+
+        <p th:if="${isOld == null}">
+            isOld是null
+        </p>
+
+        <hr>
+
+        <p th:unless="${sex == 'f'}">
+            sex是男
+        </p>
+
+    </div>
+
+    <br><br><br>
+    <h3>switch-case</h3>
+    <div th:switch="${sex}">
+        <p th:case="m">显示男</p>
+        <p th:case="f">显示女</p>
+        <p th:case="*">未知</p>
+    </div>
+
+    <div th:switch="${age}">
+        <p th:case="20">20</p>
+        <p th:case="30">30</p>
+        <P th:case="40">40</P>
+        <p th:case="*">未知年龄</p>
+    </div>
+
+</body>
+</html>

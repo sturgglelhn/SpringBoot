@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>utilObject</title>
+</head>
+<body>
+    <p th:text="${#dates.format(mydate,'yyyy-MM-dd')}"></p>
+    <p th:text="${#dates.format(mydate,'yyyy-MM-dd HH:mm:ss')}"></p>
+    <p th:text="${#dates.year(mydate)}"></p>
+    <p th:text="${#dates.month(mydate)}"></p>
+    <p th:text="${#dates.createNow()}"></p>
+<br><br>
+
+    <p th:text="${#numbers.formatCurrency(mynum)}"></p>
+    <p th:text="${#numbers.formatDecimal(mynum,5,2)}"></p>
+<br><br>
+
+    <p>处理@#string</p>
+    <p th:text="${#strings.toUpperCase(mystr)}"></p>
+    <p th:text="${#strings.indexOf(mystr,'node')}"></p>
+    <p th:text="${#strings.substring(mystr,1,5)}"></p>
+    <p th:text="${#strings.concat(mystr,'-----java开发')}"></p>
+
+<br><br>
+    <p>处理#lists</p>
+    <p th:text="${#lists.isEmpty(mylist)}"></p>
+    <p th:text="!${#lists.isEmpty(mylist)}"></p>
+    <p th:text="${#lists.size(mylist)}"></p><br>
+
+<p>空值</p>
+    <p th:text="${zoo.dog?.name}"></p>
+    <p th:text="${zoo.cat.name}"></p>
+</body>
+</html>

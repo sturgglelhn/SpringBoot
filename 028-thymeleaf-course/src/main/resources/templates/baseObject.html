@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div style="margin-left: 350px">
+        <p th:text="${#request.getAttribute('reqdata')}">request作用域</p>
+        getServerName=<span th:text="${#request.getServerName()}"></span><br>
+        getServerPort=<span th:text="${#request.getServerPort()}"></span><br>
+        getServletPath=<span th:text="${#request.getServletPath()}"></span><br>
+
+
+        <p th:text="${#session.getAttribute('sessdata')}">session中数据</p>
+        getRequestURL=<span th:text="${#request.getRequestURL()}"></span><br>
+        getRequestURI=<span th:text="${#request.getRequestURI()}"></span><br>
+        getQueryString=<span th:text="${#request.getQueryString()}"></span><br>
+
+        <br>
+        <p th:text="${#session.getAttribute('loginname')}"></p>
+        <p th:text="${session.loginname}"></p>
+
+    </div>
+</body>
+</html>

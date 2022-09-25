@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--文本字面量-->
+    <p th:text="'城市是'+${city}+',用户登录'+${isLogin}"></p><br>
+    <!-- 数字字面量-->
+    <p th:if="${age >10}">age > 10</p>
+    <p th:if="20 > 5">20大于5</p><br>
+    <!--boolean字面量-->
+    <p th:if="${isLogin == true}">用户登录了</p>
+    <!--null 字面量-->
+    <p th:if="${name == null}">name 是null</p>
+
+    <!--字符串连接-->
+    <p>字符串的连接，1使用''；2使用|字符串内容|</p>
+    <p th:text="'城市是'+${city}+'用户登录'+${isLogin}"></p>
+    <p th:text="|城市是${city}用户登录${isLogin}|"></p>
+    <hr><br>
+    <p th:if="${age > 10 }">age > 10</p>
+    <p th:if="20 > 5">20大于5</p>
+    <p th:text="${sex == 'm' ? '男':'女'} "></p>
+    <p th:text="${sex =='m' ? (isLogin?'男已经登录':'男没有登录') : '女'}"></p>
+</body>
+</html>

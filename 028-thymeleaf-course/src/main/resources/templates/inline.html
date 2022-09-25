@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:inline="text">
+        姓名是：[[${name}]]<br>
+        登录了吗：[[${isLogin}]]
+    </div>
+    <br>
+    <div>
+        姓名是：[[${name}]]<br>
+        登录了吗：[[${isLogin}]]<br>
+        性别：[[${sex}]]<br>
+        年龄：[[${age}]]<br>
+    </div>
+    <br>
+
+    <hr><hr>
+    <button onclick="fun()">单击按钮</button>
+    <script type="text/javascript" th:inline="javascript">
+        var name = [[${myuser.name}]];
+        var id = [[${myuser.id}]];
+        function fun(){
+            alert("click用户是"+name+",他的id是"+id);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>循环map，和List+Map的演示</title>
+</head>
+<body>
+
+    <div style="margin-left: 400px">
+        <div th:each="m,mSta:${usermap}">
+            <p th:text="${m.key}"></p>
+            <p th:text="${m.value.id}"></p>
+            <p th:text="${m.value.name}"></p>
+            <hr>
+        </div>
+
+        <br><br>
+
+        <div th:each="ul:${listmap}">
+            <div th:each="um:${ul}">
+                <p th:text="${um.key}"></p>
+                <p th:text="${um.value.id}"></p>
+                <p th:text="${um.value.name}">姓名是</p>
+                <hr>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--<div th:each="m:${usermap}">
+        <p th:text="${m.key}"> </p>
+        <p th:text="${m.value}"></p>
+        <br/>
+    </div>-->
+
+</body>
+</html>

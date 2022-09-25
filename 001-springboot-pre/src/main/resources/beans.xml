@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myStudent" class="com.bjpowernode.vo.Student">
+        <property name="id" value="10001"></property>
+        <property name="name" value="李浩南"></property>
+        <property name="age" value="22"></property>
+    </bean>
+
+
+    <bean id="myCat" class="com.bjpowernode.vo.Cat">
+        <property name="cardId" value="29001"></property>
+        <property name="age" value="3"></property>
+        <property name="name" value="tom猫"></property>
+     </bean>
+</beans>
